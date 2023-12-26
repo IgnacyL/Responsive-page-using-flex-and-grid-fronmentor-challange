@@ -1,0 +1,189 @@
+@use "./mixins" as *;
+@use "./media" as *;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.8rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(#ffffff, #eaeaea);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+  max-width: 1440px;
+  // overflow: hidden;
+}
+
+// \\\\\\\\\\NAVIGATION\\\\\\\\\\\
+nav {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+  }
+  .btn {
+    @include btn-box;
+    background-color: #13183f;
+    z-index: 1;
+  }
+  .btn:hover {
+    background-color: #83869a;
+  }
+}
+// \\\\\\\\\\Header\\\\\\\\\\\
+header {
+  padding: 20rem 5rem;
+  .container {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 45.7rem;
+      height: 36rem;
+
+      h1 {
+        font-size: 56px;
+        line-height: 70px;
+      }
+      p {
+        color: #83869a;
+      }
+    }
+    .btn {
+      @include btn-box;
+      position: relative;
+      background: linear-gradient(#f02aa6, #ff6f48);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .btn::before {
+      @include btn-before;
+      background: #ffa7c3;
+    }
+    .btn:hover::before {
+      opacity: 1;
+    }
+    .deskop-img {
+      position: absolute;
+      right: -30%;
+      top: -115%;
+      height: 99rem;
+      width: 91rem;
+      overflow: hidden;
+      background-image: url("../img/image-hero-desktop.png");
+    }
+  }
+}
+/////////Section////////////////
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  p {
+    color: #83869a;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(350px, 1fr));
+    column-gap: 2rem;
+    row-gap: 5rem;
+    margin-bottom: 20rem;
+  }
+  .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    align-items: flex-start;
+    padding-left: 2rem;
+    border-radius: 2.5rem;
+    background: #ffffff;
+    img {
+      position: absolute;
+      top: -10%;
+    }
+    p {
+      width: 65%;
+    }
+    a {
+      text-decoration: none;
+      color: #f74780;
+      font-weight: 800;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #ffa7c3;
+    }
+  }
+  .one {
+    background: linear-gradient(#f02aa6, #ff6f48);
+    h1 {
+      position: relative;
+      top: -5%;
+      color: white;
+      font-size: 42px;
+      font-weight: 800;
+      width: 75%;
+    }
+  }
+}
+/////////Foooter////////////////
+
+footer {
+  background-color: #13183f;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+  }
+  .btn {
+    @include btn-box;
+    position: relative;
+    background: linear-gradient(#4851ff, #f02aa6);
+    overflow: hidden;
+    z-index: 0;
+  }
+  .btn::before {
+    @include btn-before;
+    background: #ffa7c3;
+  }
+  .btn:hover::before {
+    opacity: 1;
+  }
+}
+
+/////////MEDIAQUERIES////////////////
+
+@media (max-width: 450px) {
+  @include small-device;
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+  @include medium-devices;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  @include large-device;
+}

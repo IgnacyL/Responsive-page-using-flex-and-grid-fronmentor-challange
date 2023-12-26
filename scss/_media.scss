@@ -1,0 +1,184 @@
+@mixin small-device {
+  nav {
+    .btn {
+      width: 13rem;
+      height: 5rem;
+    }
+  }
+  header {
+    padding: 1rem 0;
+    .container {
+      flex-direction: column;
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        margin: 0 1rem;
+        height: 100%;
+        width: 90%;
+        gap: 2.5rem;
+
+        h1 {
+          font-size: 32px;
+          line-height: 40px;
+          font-weight: 800;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+      .btn {
+        align-self: flex-start;
+        min-width: 14rem;
+        min-height: 5rem;
+      }
+      .deskop-img {
+        right: 50%;
+        top: 120%;
+        transform: translateX(50%);
+        height: 40rem;
+        width: 33rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/image-hero-mobile.png");
+      }
+    }
+  }
+
+  section {
+    height: 100%;
+
+    .container {
+      margin-top: 20rem;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, minmax(280px, 1fr));
+    }
+    .item {
+      p {
+        font-size: 16px;
+        width: 77%;
+      }
+    }
+    .one {
+      background: linear-gradient(#f02aa6, #ff6f48);
+      height: 14rem;
+      margin-top: 20rem;
+      h1 {
+        font-size: 22px;
+        width: 90%;
+      }
+    }
+  }
+}
+
+@mixin medium-devices {
+  header {
+    padding: 1rem 2rem;
+    .container {
+      justify-content: center;
+      .text {
+        justify-content: center;
+        gap: 2.5rem;
+        h1 {
+          font-size: 40px;
+          line-height: 51px;
+          font-weight: 800;
+        }
+        p {
+          font-size: 1.8rem;
+        }
+      }
+      .deskop-img {
+        right: 50%;
+        top: 120%;
+        transform: translateX(50%);
+        height: 40rem;
+        width: 33rem;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        background-image: url("../img/image-hero-mobile.png");
+      }
+    }
+  }
+
+  section {
+    height: 100%;
+
+    .container {
+      margin-top: 50rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    .item {
+      padding: 3rem;
+    }
+    .one {
+      h1 {
+        font-size: 22px;
+        width: 90%;
+      }
+    }
+  }
+}
+
+@mixin large-device {
+  header {
+    padding: 10rem 2rem;
+    overflow: hidden;
+    .container {
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+
+      height: 100%;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+        width: 45.7rem;
+        height: 28.4rem;
+
+        h1 {
+          font-size: 40px;
+          line-height: 51px;
+          width: 90%;
+        }
+        p {
+          width: 90%;
+        }
+      }
+      .deskop-img {
+        position: absolute;
+        right: -25%;
+        top: -103%;
+        height: 64rem;
+        width: 64rem;
+        background-repeat: no-repeat;
+        background-image: url("../img/image-hero-tablet.png");
+        overflow: hidden;
+      }
+    }
+  }
+
+  section {
+    height: 100%;
+
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    .item {
+      padding: 3rem;
+    }
+    .one {
+      h1 {
+        font-size: 22px;
+        width: 90%;
+      }
+    }
+  }
+}

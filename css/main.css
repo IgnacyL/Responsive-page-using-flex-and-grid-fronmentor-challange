@@ -1,0 +1,473 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
+  background: linear-gradient(#ffffff, #eaeaea);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+  max-width: 1440px;
+}
+
+nav .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+}
+nav .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 800;
+  width: 17rem;
+  height: 6rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #13183f;
+  z-index: 1;
+}
+nav .btn:hover {
+  background-color: #83869a;
+}
+
+header {
+  padding: 20rem 5rem;
+}
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+header .container .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 45.7rem;
+  height: 36rem;
+}
+header .container .text h1 {
+  font-size: 56px;
+  line-height: 70px;
+}
+header .container .text p {
+  color: #83869a;
+}
+header .container .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 800;
+  width: 17rem;
+  height: 6rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f02aa6), to(#ff6f48));
+  background: linear-gradient(#f02aa6, #ff6f48);
+  overflow: hidden;
+  z-index: 1;
+}
+header .container .btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  background: #ffa7c3;
+}
+header .container .btn:hover::before {
+  opacity: 1;
+}
+header .container .deskop-img {
+  position: absolute;
+  right: -30%;
+  top: -115%;
+  height: 99rem;
+  width: 91rem;
+  overflow: hidden;
+  background-image: url("../img/image-hero-desktop.png");
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+section p {
+  color: #83869a;
+}
+section .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, minmax(350px, 1fr));
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+  row-gap: 5rem;
+  margin-bottom: 20rem;
+}
+section .item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 2rem;
+  border-radius: 2.5rem;
+  background: #ffffff;
+}
+section .item img {
+  position: absolute;
+  top: -10%;
+}
+section .item p {
+  width: 65%;
+}
+section .item a {
+  text-decoration: none;
+  color: #f74780;
+  font-weight: 800;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+section .item a:hover {
+  color: #ffa7c3;
+}
+section .one {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f02aa6), to(#ff6f48));
+  background: linear-gradient(#f02aa6, #ff6f48);
+}
+section .one h1 {
+  position: relative;
+  top: -5%;
+  color: white;
+  font-size: 42px;
+  font-weight: 800;
+  width: 75%;
+}
+
+footer {
+  background-color: #13183f;
+}
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+}
+footer .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 800;
+  width: 17rem;
+  height: 6rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4851ff), to(#f02aa6));
+  background: linear-gradient(#4851ff, #f02aa6);
+  overflow: hidden;
+  z-index: 0;
+}
+footer .btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  background: #ffa7c3;
+}
+footer .btn:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 450px) {
+  nav .btn {
+    width: 13rem;
+    height: 5rem;
+  }
+  header {
+    padding: 1rem 0;
+  }
+  header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .container .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70%;
+    margin: 0 1rem;
+    height: 100%;
+    width: 90%;
+    gap: 2.5rem;
+  }
+  header .container .text h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+  }
+  header .container .text p {
+    font-size: 1.6rem;
+  }
+  header .container .btn {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    min-width: 14rem;
+    min-height: 5rem;
+  }
+  header .container .deskop-img {
+    right: 50%;
+    top: 120%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    height: 40rem;
+    width: 33rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/image-hero-mobile.png");
+  }
+  section {
+    height: 100%;
+  }
+  section .container {
+    margin-top: 20rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, minmax(280px, 1fr));
+  }
+  section .item p {
+    font-size: 16px;
+    width: 77%;
+  }
+  section .one {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f02aa6), to(#ff6f48));
+    background: linear-gradient(#f02aa6, #ff6f48);
+    height: 14rem;
+    margin-top: 20rem;
+  }
+  section .one h1 {
+    font-size: 22px;
+    width: 90%;
+  }
+}
+@media (min-width: 451px) and (max-width: 768px) {
+  header {
+    padding: 1rem 2rem;
+  }
+  header .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .container .text {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2.5rem;
+  }
+  header .container .text h1 {
+    font-size: 40px;
+    line-height: 51px;
+    font-weight: 800;
+  }
+  header .container .text p {
+    font-size: 1.8rem;
+  }
+  header .container .deskop-img {
+    right: 50%;
+    top: 120%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    height: 40rem;
+    width: 33rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/image-hero-mobile.png");
+  }
+  section {
+    height: 100%;
+  }
+  section .container {
+    margin-top: 50rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  section .item {
+    padding: 3rem;
+  }
+  section .one h1 {
+    font-size: 22px;
+    width: 90%;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  header {
+    padding: 10rem 2rem;
+    overflow: hidden;
+  }
+  header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 100%;
+  }
+  header .container .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2.5rem;
+    width: 45.7rem;
+    height: 28.4rem;
+  }
+  header .container .text h1 {
+    font-size: 40px;
+    line-height: 51px;
+    width: 90%;
+  }
+  header .container .text p {
+    width: 90%;
+  }
+  header .container .deskop-img {
+    position: absolute;
+    right: -25%;
+    top: -103%;
+    height: 64rem;
+    width: 64rem;
+    background-repeat: no-repeat;
+    background-image: url("../img/image-hero-tablet.png");
+    overflow: hidden;
+  }
+  section {
+    height: 100%;
+  }
+  section .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  section .item {
+    padding: 3rem;
+  }
+  section .one h1 {
+    font-size: 22px;
+    width: 90%;
+  }
+}/*# sourceMappingURL=main.css.map */
